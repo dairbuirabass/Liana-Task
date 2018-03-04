@@ -18,11 +18,21 @@
 .navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
 
 .navbar-light {
-  min-height:100px !important
+  min-height: 80px !important
 }
 
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
-    background-color: #4C8930 !important;
+  background-color: #4C8930 !important;
+}
+
+/* Parallax image */
+.parallax {
+  background-image: url("../assets/background.png");
+  height: 325px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 576px) {
