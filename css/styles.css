@@ -28,11 +28,23 @@
 /* Parallax image */
 .parallax {
   background-image: url("../assets/background.png");
-  height: 325px;
+  height: 300px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Thumbnail images */
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
 }
 
 @media (min-width: 576px) {
