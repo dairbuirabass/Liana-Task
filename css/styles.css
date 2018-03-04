@@ -1,5 +1,5 @@
+/* First Navigation Bar */
 .navbar-default {
-  min-height: 25px;
   background-color: #4C8930;
   border-color: #000;
 }
@@ -11,6 +11,14 @@
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #D3D3D3;
+}
+
+/* Second Navigation Bar */
+
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+
+.navbar-light {
+  min-height:100px !important
 }
 
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
