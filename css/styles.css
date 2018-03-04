@@ -22,6 +22,7 @@
 }
 
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+  border: 0 none;
   background-color: #4C8930 !important;
 }
 
@@ -33,11 +34,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-/* Thumbnail images */
-.thumbnail {
-    position: relative;
 }
 
 .caption {
