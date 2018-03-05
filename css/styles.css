@@ -50,6 +50,15 @@
   background-color: #ECEEEF !important;
 }
 
+/* Popovers */
+.popover-header {
+  background-color: #FF4D4D;
+  color: White;
+}
+
+.popover-body {
+}
+
 @media (min-width: 576px) {
 
 }

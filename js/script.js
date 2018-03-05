@@ -18,14 +18,12 @@ $(document).ready(function () {
         newDate = day + '.' + month + '.' + year;
         $( ".news-card > a > .card-title" ).eq( index )
           .html(newDate);
-          console.log(newDate)
 
         // Setting title
         var title = current.getElementsByTagName("title")[0].childNodes[0].nodeValue;
         title = title.replace(/\[.*?\]/g, ""); // Remove extra tag
         $( ".news-card > a >.card-text" ).eq( index )
           .html(title);
-          console.log(title)
 
         //Setting link
         var link  = current.getElementsByTagName("link")[0].childNodes[0].nodeValue + "";
@@ -34,4 +32,16 @@ $(document).ready(function () {
       })
     })
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
+    $('#subscribeBtn').on('click', function(event) {
+      var email = $( "#email" ).val();
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if ( re.test(String(email).toLowerCase()) ) {
+        $("#invalid-email-msg").remove();
+        console.log("YES");
+      } else {
+        $("#subscribe").append("<p id='invalid-email-msg' class='text-danger'>Invalid email! Please try again</p>");
+        console.log("NO");
+      }
+    });
   });
