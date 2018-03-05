@@ -36,11 +36,18 @@
   background-size: cover;
 }
 
+
+/* Thumbnails */
 .caption {
     position: absolute;
     top: 45%;
     left: 0;
     width: 100%;
+}
+
+/* Latest news */
+.bg-latest-news {
+  background-color: #ECEEEF !important;
 }
 
 @media (min-width: 576px) {
