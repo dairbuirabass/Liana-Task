@@ -31,6 +31,8 @@ $(document).ready(function () {
     .then(contents => {
       var xmlDoc = $.parseXML(contents);
       var items = $("item", xmlDoc);
+      var curHeight = $(".card-container").height();
+      var autoHeight = 0;
       $.each( items, function( index, current ) {
         if (index == 3) {
           return false;
@@ -55,7 +57,12 @@ $(document).ready(function () {
         var link  = current.getElementsByTagName("link")[0].childNodes[0].nodeValue + "";
         $( ".news-card > a" ).eq( index )
           .attr("href", link);
+
+        if (autoHeight < $(".card-container").eq(index).height()) {
+          autoHeight = $(".card-container").eq(index).height();
+        }
       })
+      $(".card-container").height(curHeight).animate({height: autoHeight}, 1000, function () { $(".card-container").height('auto'); })
     })
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 

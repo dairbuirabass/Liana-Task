@@ -53,12 +53,6 @@
   background-color: #ECEEEF !important;
 }
 
-.news-card {
-  max-height: 500px;
-  transition: max-height 0.25s ease-in;
-}
-
-
 /* Footer */
 footer {
   background-color: Black !important;
