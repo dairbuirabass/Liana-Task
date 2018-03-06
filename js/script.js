@@ -1,16 +1,24 @@
 $(document).ready(function () {
-  var animationIsFinished = false;
+  var animationIsFinished_clients = false;
+  var animationIsFinished_employees = false;
+  var animationIsFinished_users = false;
   animateNumbers();
   $( window ).scroll(function() {
       animateNumbers();
   })
 
   function animateNumbers() {
-    if (isScrolledIntoView( $("#clients")) && !animationIsFinished) {
+    if (isScrolledIntoView( $("#clients")) && !animationIsFinished_clients) {
       $("#clients").animateNumber({ number: 3000 }, 1500);
+      animationIsFinished_clients = true;
+    }
+    if (isScrolledIntoView( $("#employees")) && !animationIsFinished_employees) {
       $("#employees").animateNumber({ number: 180 }, 1000);
+      animationIsFinished_employees = true;
+    }
+    if (isScrolledIntoView( $("#users")) && !animationIsFinished_users) {
       $("#users").animateNumber({ number: 10000 }, 2000);
-      animationIsFinished = true;
+      animationIsFinished_users = true;
     }
   }
 
@@ -24,9 +32,10 @@ $(document).ready(function () {
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
 
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = "https://www.lianatech.com/news/all-news.rss"; // site that doesn’t send Access-Control-*
-  fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+  // Heroku app that prepends Allow-Origin policy
+  const proxyurl = "https://cors-allow-origin-policy.herokuapp.com/";
+  const url = "https://www.lianatech.com/news/all-news.rss";
+  fetch(proxyurl + url)
     .then(response => response.text())
     .then(contents => {
       var xmlDoc = $.parseXML(contents);
