@@ -16,7 +16,8 @@
 /* Second Navigation Bar */
 
 .navbar-nav > li > a {
-  padding-top: 5px !important; padding-bottom:5px !important;
+  padding-top: 5px !important;
+  padding-bottom:5px !important;
 }
 
 .navbar-light {
@@ -52,6 +53,7 @@
   background-color: #ECEEEF !important;
 }
 
+/* Footer */
 footer {
   background-color: Black !important;
 }
@@ -59,6 +61,7 @@ footer .footer-info > ul {
   list-style-type: none;
 }
 
+/* Share icons */
 .social li {
 	background: none repeat scroll 0 0 #4C8930;
 	-webkit-border-radius: 50%;
@@ -94,35 +97,44 @@ footer .footer-info > ul {
 }
 .social li a i {
 	font-size: 16px;
-	margin: 0 0 0 5px;
+	margin: 0 0 0 0;
 	color: #EDEFF1 !important;
 }
 
 @media (max-width: 576px) {
-  .navbar-default .navbar-collapse.collapse {
-    display: block!important;
-  }
 
+}
+
+
+@media (max-width: 768px) {
 }
 
 @media (max-width: 992px) {
+
+  /* First Nav */
   .navbar-default .navbar-collapse.collapse {
-    display: block!important;
+    display: block !important;
   }
-  .navbar-nav>li, .navbar-nav {
+
+  .navbar-default .input-group {
+    padding-right: 0px !important;
     float: left !important;
+    min-width: 64px !important;
+    width: 100%;
   }
-  .navbar-nav.navbar-right:last-child {
-    margin-right: -15px !important;
+
+  .navbar-default  .navbar-right {
   }
-  .navbar-right {
-    float: right!important;
-  } 
+
+  /* Footer */
+  footer .navbar-brand-container {
+    display: inline-block !important;
+    /* background-color: Red !important; */
+  }
+  .footer-list .navbar-collapse.collapse {
+    display: block !important;
+  }
+
+  .navbar-default  .navbar-right {
+  }
 }
-
-/*
-
-
-
-
-*/

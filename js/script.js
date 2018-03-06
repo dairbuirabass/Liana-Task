@@ -33,15 +33,24 @@ $(document).ready(function () {
     })
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 
-    $('#subscribeBtn').on('click', function(event) {
+    $("#subscribeBtn").on('click', function(event) {
       var email = $( "#email" ).val();
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if ( re.test(String(email).toLowerCase()) ) {
-        $("#invalid-email-msg").remove();
-        console.log("YES");
+        $("#subscription-msg").html("");
+        $("#thankYouModal").modal('show');
       } else {
-        $("#subscribe").append("<p id='invalid-email-msg' class='text-danger'>Invalid email! Please try again</p>");
-        console.log("NO");
+        $("#subscription-msg")
+          .removeClass("text-success")
+          .addClass("text-danger")
+          .html("Invalid email! Please try again");
       }
     });
+
+    $("#submitSubscribe").on('click', function(event) {
+      $("#subscription-msg")
+      .removeClass("text-danger")
+      .addClass("text-success")
+      .html("Thanks! We will keep in touch");
+    })
   });
