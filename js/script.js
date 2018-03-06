@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  // Numbers animated
   var animationIsFinished_clients = false;
   var animationIsFinished_employees = false;
   var animationIsFinished_users = false;
@@ -31,6 +33,9 @@ $(document).ready(function () {
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
+
+  //Loader appended
+  $(".news-card").append("<div class='w-100'><div class='loader mx-auto'></div></div>")
 
   // Heroku app that prepends Allow-Origin policy
   const proxyurl = "https://cors-allow-origin-policy.herokuapp.com/";
@@ -66,6 +71,8 @@ $(document).ready(function () {
         var link  = current.getElementsByTagName("link")[0].childNodes[0].nodeValue + "";
         $( ".news-card > a" ).eq( index )
           .attr("href", link);
+
+        $(".loader").remove();
 
         if (autoHeight < $(".card-container").eq(index).height()) {
           autoHeight = $(".card-container").eq(index).height();
