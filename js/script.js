@@ -1,4 +1,29 @@
 $(document).ready(function () {
+  var animationIsFinished = false;
+  animateNumbers();
+  $( window ).scroll(function() {
+      animateNumbers();
+  })
+
+  function animateNumbers() {
+    if (isScrolledIntoView( $("#clients")) && !animationIsFinished) {
+      $("#clients").animateNumber({ number: 3000 }, 1500);
+      $("#employees").animateNumber({ number: 180 }, 1000);
+      $("#users").animateNumber({ number: 10000 }, 2000);
+      animationIsFinished = true;
+    }
+  }
+
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   const url = "https://www.lianatech.com/news/all-news.rss"; // site that doesn’t send Access-Control-*
   fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
@@ -10,6 +35,7 @@ $(document).ready(function () {
         if (index == 3) {
           return false;
         }
+
         // Setting date
         var date = new Date(current.getElementsByTagName("pubDate")[0].childNodes[0].nodeValue),
         year      = date.getFullYear(),

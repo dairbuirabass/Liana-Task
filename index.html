@@ -76,7 +76,7 @@
 
     <!-- Thumbnails -->
     <div class="container px-5">
-      <div class="row h-100 justify-content-center align-items-center my-5">
+      <div class="row justify-content-center align-items-center my-5">
         <div class="col-md-4 text-center px-4 py-2">
           <a href="#">
             <img src="assets/company.png" alt="" class="img-fluid rounded">
@@ -106,22 +106,28 @@
     <!-- End of Thumbnails -->
 
     <!-- Numbers -->
-    <div class="container px-0 w-50">
-      <div class="row h-100 justify-content-center align-items-center my-5">
-        <div class="thumbnail col-md-4 col-xs-12 text-center px-1 py-2">
-          <img src="assets/business-icon.png" alt="" class="float-left">
-          <p class="h2 font-weight-light">3000</p>
-          <p>Clients</p>
+    <div class="container px-5">
+      <div class="row justify-content-center align-items-center my-5">
+        <div class="thumbnail col-md-4 col-xs-12 text-center px-4 py-2">
+          <img src="assets/business-icon.png" alt="" class="pl-md-5">
+          <div class="float-md-right pr-md-5">
+            <p id="clients" class="h2 font-weight-light">3000</p>
+            <p>Clients</p>
+          </div>
         </div>
-        <div class="thumbnail col-md-4 text-center px-1 py-2">
-          <img src="assets/employees-icon.png" alt="" class="float-left">
-          <p class="h2 font-weight-light">180</p>
-          <p>Employees</p>
+        <div class="thumbnail col-md-4 col-xs-12 text-center px-4 py-2">
+          <img src="assets/employees-icon.png" alt="" class="pl-md-5">
+          <div class="float-md-right pr-md-5">
+            <p id="employees" class="h2 font-weight-light">180</p>
+            <p>Employees</p>
+          </div>
         </div>
-        <div class="col-md-4 text-center px-1 py-2">
-          <img src="assets/users-icon.png" alt="" class="float-left">
-          <p class="h2 font-weight-light">10000</p>
-          <p>Daily users</p>
+        <div class="thumbnail col-md-4 col-xs-12 text-center px-4 py-2">
+          <img src="assets/users-icon.png" alt="" class="pl-md-5">
+          <div class="float-md-right pr-md-5">
+            <p id="users" class="h2 font-weight-light">10000</p>
+            <p>Daily users</p>
+          </div>
         </div>
       </div>
     </div>
@@ -131,32 +137,35 @@
     <div id="latest-news" class="container-fluid bg-latest-news px-0 py-3">
       <h3 class="py-3 text-dark text-center">Latest news</h3>
 
-      <div class="row w-75 mx-auto px-5">
-        <div class="col-md-4 px-2 py-2 my-2">
-          <div class="news-card card-body rounded bg-white h-100">
-            <a class="nav-link" href="">
-              <h6 class="card-title text-muted font-weight-light"></h6>
-              <p class="card-text text-dark">Loading, please wait...</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 px-2 py-2 my-2">
-          <div class="news-card card-body rounded bg-white h-100">
-            <a class="nav-link" href="">
-              <h6 class="card-title text-muted font-weight-light"></h6>
-              <p class="card-text text-dark">Loading, please wait...</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 px-2 py-2 my-2">
-          <div class="news-card card-body rounded bg-white h-100">
-            <a class="nav-link" href="">
-                <h6 class="card-title text-muted font-weight-light"></h6>
-                <p class="card-text text-dark">Loading, please wait...</p>
-            </a>
-          </div>
-        </div>
-      </div>
+     <div class="container">
+       <div class="row mx-auto px-5">
+         <div class="bg-white rounded card-container col-md-4 px-2 py-2 my-2">
+           <div class="news-card card-body h-100">
+             <a class="nav-link" href="">
+               <h6 class="card-title text-muted font-weight-light"></h6>
+               <p class="card-text text-dark">Loading, please wait...</p>
+             </a>
+           </div>
+         </div>
+         <div class="bg-white rounded card-container col-md-4 px-2 py-2 my-2 ">
+           <div class="news-card card-body h-100">
+             <a class="nav-link" href="">
+               <h6 class="card-title text-muted font-weight-light"></h6>
+               <p class="card-text text-dark">Loading, please wait...</p>
+             </a>
+           </div>
+         </div>
+         <div class="bg-white rounded card-container col-md-4 px-2 py-2 my-2">
+           <div class="news-card card-body h-100">
+             <a class="nav-link" href="">
+               <h6 class="card-title text-muted font-weight-light"></h6>
+               <p class="card-text text-dark">Loading, please wait...</p>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
+
 
     </div>
     <!-- End of Latest News -->
@@ -211,9 +220,9 @@
     <div id="subscribe" class="container-fluid text-center border-top px-0 py-3 mt-5">
       <h3 class="py-3 text-dark ">Subscribe to our newsletter</h3>
       <p class="text-dark">Follow our story and get the latest promotonial news about our products and events.</p>
-      <div class="input-group input-group-lg w-50 my-3 mx-auto">
-        <input id="email" class="form-control mr-sm-2" type="text" placeholder="Your email address" aria-label="Email address">
-        <button id="subscribeBtn" class="btn btn-success my-2 my-sm-0" type="button">Subscribe</button>
+      <div class="col-md-6 col-xs-12 input-group input-group-lg my-3 mx-auto">
+        <input id="email" class="form-control mr-2" type="text" placeholder="Your email address" aria-label="Email address">
+        <button id="subscribeBtn" class="btn btn-success " type="button">Subscribe</button>
       </div>
       <p id="subscription-msg" class="text-danger"></p>
     </div>
@@ -227,7 +236,7 @@
             <a class="navbar-brand" href="#">Liana Technologies</a>
           </div>
           <div class="footer-list">
-            <ul class="nav navbar-nav ml-auto text-light">
+            <ul class="nav navbar-nav text-light px-sm-0">
               <li class="nav-item">
                 <a class="nav-link" href="#">Company</a>
               </li>
@@ -248,7 +257,12 @@
         </div>
       </nav>
       <div class="container footer-info px-3 pb-5">
-        <ul class="d-inline-block text-light px-0 w-25 mr-0">
+        <ul class="d-inline-block social pull-right mx-sm-auto">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        <ul class="col-xs-12 d-inline-block text-light px-0 mr-0">
           <li class="">
             <h5>Sales and inquiries</h5>
           </li>
@@ -262,11 +276,7 @@
         <div class="d-inline-block">
           <button class="btn btn-success">Contact us</button>
         </div>
-        <ul class="d-inline-block social">
-          <li><a href="#"><i class=" fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
+
       </div>
     </footer>
     <!-- End of Footer -->
@@ -282,7 +292,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p class="h3 text-dark">Are you sure you want to subscribe to Liana's mailing list</p>
+            <p class="h3 text-dark">Are you sure you want to subscribe to Liana's mailing list?</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -296,6 +306,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/jquery.animateNumber.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
